@@ -21,6 +21,7 @@ class Test_001_login:
 
         if act_title == "Your store. Login":
             assert True
+            self.driver.close()
             self.logger.info("************ Home page title is matched/pass ************")
         else:
             self.driver.save_screenshot(".\\Screenshot\\"+"test_homepage_title.png")
@@ -40,6 +41,7 @@ class Test_001_login:
         if act_title == "Dashboard / nopCommerce administration":
             self.logger.info("************ login test pass ************")
             assert True
+            self.driver.close()
         else:
             self.driver.save_screenshot(".\\Screenshot\\"+"test_login.png")
             self.logger.info("************ login test fail ************")
